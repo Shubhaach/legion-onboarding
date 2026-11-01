@@ -49,9 +49,17 @@ export function FlowProvider({ children }: { children: React.ReactNode }) {
     return { ok: res.ok && !!body.ok, error: body.error, view: body };
   }, [refresh]);
 
+  // Re-read the session on every navigation (state is set in the async callback).
   useEffect(() => {
-    void refresh();
-  }, [refresh, pathname]);
+    let alive = true;
+    fetch("/api/session", { cache: "no-store" })
+      .then((r) => r.json() as Promise<View>)
+      .then((v) => alive && setView(v))
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, [pathname]);
 
   const pending = !!view?.lookups && Object.values(view.lookups).some((l) => l.status === "pending");
   useEffect(() => {
