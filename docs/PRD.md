@@ -34,7 +34,7 @@ Legion already pays to bring patients to the door, then loses three in four of t
 **Goals**
 
 1. **Pull, don't ask.** The patient types phone and date of birth; everything else arrives pre-filled to confirm.
-2. **Fewer screens.**&#32;
+2. **Fewer screens.** 15 down to 7.
 3. **More bookings.** Lift start → booked.
 4. **No bookings at the cost of show-ups.** First-visit completion holds or rises.
 
