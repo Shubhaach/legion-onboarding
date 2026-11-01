@@ -1,0 +1,51 @@
+{
+  "_note": "Identity results (Verified mock). Synthetic people and addresses. Code on screen 1: any 6 digits works; 000000 simulates a wrong code.",
+  "patients": [
+    {
+      "id": "p-jordan",
+      "firstName": "Jordan",
+      "lastName": "Reyes",
+      "dob": "1992-03-14",
+      "phone": "5125550142",
+      "email": "jordan.reyes@example.com",
+      "address": { "line1": "418 Riverside Ln", "city": "Austin", "state": "TX", "zip": "78704" }
+    },
+    {
+      "id": "p-taylor",
+      "firstName": "Taylor",
+      "lastName": "Brooks",
+      "dob": "1988-11-02",
+      "phone": "5125550111",
+      "email": "taylor.brooks@example.com",
+      "address": { "line1": "2207 Bayou Park Dr", "city": "Houston", "state": "TX", "zip": "77019" }
+    },
+    {
+      "id": "p-morgan",
+      "firstName": "Morgan",
+      "lastName": "Lee",
+      "dob": "1996-07-21",
+      "phone": "5125550122",
+      "email": "morgan.lee@example.com",
+      "address": { "line1": "85 Elm Grove Ct", "city": "Dallas", "state": "TX", "zip": "75204" }
+    },
+    {
+      "id": "p-casey",
+      "firstName": "Casey",
+      "lastName": "Kim",
+      "dob": "1990-01-30",
+      "phone": "4155550133",
+      "email": "casey.kim@example.com",
+      "address": { "line1": "640 Hillcrest Ave", "city": "San Francisco", "state": "CA", "zip": "94117" }
+    },
+    {
+      "id": "p-riley",
+      "firstName": "Riley",
+      "lastName": "Chen",
+      "dob": "1999-05-09",
+      "phone": "5125550155",
+      "email": "riley.chen@example.com",
+      "address": { "line1": "1312 Lamar Crossing", "city": "Austin", "state": "TX", "zip": "78756" }
+    }
+  ],
+  "servedStates": ["TX", "UT"]
+}

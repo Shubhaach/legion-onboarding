@@ -1,0 +1,30 @@
+{
+  "_note": "Medication history (DoseSpot mock). Dates are relative (days ago) so the demo works on any day. 'controlled' marks DEA-scheduled drugs; flag for the clinician, never block the patient.",
+  "medications": {
+    "p-jordan": {
+      "fills": [
+        { "name": "Sertraline", "strength": "50 mg", "lastFilledDaysAgo": 41, "controlled": false },
+        { "name": "Hydroxyzine", "strength": "25 mg", "lastFilledDaysAgo": 140, "controlled": false }
+      ],
+      "pharmacy": { "name": "Corner Pharmacy", "address": "S Congress Ave, Austin, TX" }
+    },
+    "p-taylor": {
+      "fills": [
+        { "name": "Escitalopram", "strength": "10 mg", "lastFilledDaysAgo": 25, "controlled": false }
+      ],
+      "pharmacy": { "name": "Montrose Drug", "address": "Westheimer Rd, Houston, TX" }
+    },
+    "p-morgan": {
+      "fills": [
+        { "name": "Bupropion XL", "strength": "150 mg", "lastFilledDaysAgo": 12, "controlled": false }
+      ],
+      "pharmacy": { "name": "Uptown Pharmacy", "address": "McKinney Ave, Dallas, TX" }
+    },
+    "p-riley": {
+      "fills": [
+        { "name": "Amphetamine-dextroamphetamine", "strength": "20 mg", "lastFilledDaysAgo": 18, "controlled": true, "schedule": "II", "class": "stimulant" }
+      ],
+      "pharmacy": { "name": "Burnet Road Pharmacy", "address": "Burnet Rd, Austin, TX" }
+    }
+  }
+}

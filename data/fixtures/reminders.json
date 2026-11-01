@@ -1,0 +1,9 @@
+{
+  "_note": "Mock text messages for the 'You're booked' screen and demo panel. No real SMS is sent. {placeholders} are filled at runtime.",
+  "messages": [
+    { "id": "booked", "sendAt": "on_booking", "text": "Legion Health: You're booked with {provider} on {day} at {time} CT. Add to calendar: {calendarLink}" },
+    { "id": "reminder_24h", "sendAt": "visit_minus_24h", "text": "Reminder: your video visit with {provider} is tomorrow at {time} CT. Reply R to reschedule." },
+    { "id": "reminder_1h", "sendAt": "visit_minus_1h", "text": "Your visit with {provider} starts in 1 hour. Join here: {joinLink}" },
+    { "id": "after_visit", "sendAt": "on_visit_completed", "text": "Thanks for your first visit. Your next steps and any prescriptions are in your Legion account." }
+  ]
+}

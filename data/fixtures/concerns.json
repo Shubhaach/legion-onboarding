@@ -1,0 +1,20 @@
+{
+  "_note": "Fixed taxonomy for screen 4. The AI maps free text to these ids only; the keyword map is the fallback when no API key is set. Matching is case-insensitive substring.",
+  "concerns": [
+    { "id": "anxiety", "label": "Anxiety", "keywords": ["anxious", "anxiety", "on edge", "worry", "worried", "panic", "nervous", "stress"] },
+    { "id": "depression", "label": "Low mood", "keywords": ["depressed", "depression", "sad", "hopeless", "no energy", "unmotivated", "empty"] },
+    { "id": "sleep", "label": "Trouble sleeping", "keywords": ["sleep", "insomnia", "can't sleep", "cant sleep", "awake at night", "tired"] },
+    { "id": "adhd", "label": "Focus and attention", "keywords": ["focus", "adhd", "attention", "distracted", "concentrate", "procrastinat"] },
+    { "id": "trauma", "label": "Trauma", "keywords": ["trauma", "ptsd", "flashback", "nightmare", "assault", "accident"] },
+    { "id": "ocd", "label": "Intrusive thoughts", "keywords": ["ocd", "intrusive", "compulsive", "checking", "rituals"] },
+    { "id": "bipolar", "label": "Mood swings", "keywords": ["bipolar", "manic", "mania", "mood swings"] },
+    { "id": "substance_use", "label": "Substance use", "keywords": ["drinking", "alcohol", "drugs", "substance", "using again"] },
+    { "id": "eating", "label": "Eating concerns", "keywords": ["eating", "binge", "purge", "food"] },
+    { "id": "other", "label": "Something else", "keywords": [] }
+  ],
+  "examples": [
+    { "text": "Trouble sleeping and feeling on edge at work for a few months.", "expected": ["sleep", "anxiety"] },
+    { "text": "I can't focus at work and keep procrastinating.", "expected": ["adhd"] },
+    { "text": "Feeling low and empty since the breakup, no energy.", "expected": ["depression"] }
+  ]
+}

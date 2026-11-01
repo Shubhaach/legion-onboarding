@@ -1,0 +1,42 @@
+{
+  "_note": "Coverage results (Sohar mock: discovery + eligibility + benefits). Member IDs are fake. Amounts in USD.",
+  "selfPayFirstVisit": 250,
+  "coverage": {
+    "p-jordan": {
+      "status": "active",
+      "payer": "Blue Cross Blue Shield of Texas",
+      "plan": "PPO",
+      "memberId": "XYZ884214821",
+      "inNetwork": true,
+      "behavioralHealthCarveOut": false,
+      "copay": 30,
+      "deductible": { "individual": 1500, "met": 1500 },
+      "coinsurancePct": 0
+    },
+    "p-taylor": null,
+    "p-morgan": {
+      "status": "active",
+      "payer": "Aetna",
+      "plan": "Open Access Managed Choice",
+      "memberId": "W2210457733",
+      "inNetwork": true,
+      "behavioralHealthCarveOut": false,
+      "copay": 40,
+      "deductible": { "individual": 2000, "met": 2000 },
+      "coinsurancePct": 0
+    },
+    "p-casey": null,
+    "p-riley": {
+      "status": "active",
+      "payer": "UnitedHealthcare",
+      "plan": "Choice Plus",
+      "memberId": "UHC731905562",
+      "inNetwork": true,
+      "behavioralHealthCarveOut": true,
+      "carveOutAdministrator": "Optum Behavioral Health",
+      "copay": 25,
+      "deductible": { "individual": 1000, "met": 1000 },
+      "coinsurancePct": 0
+    }
+  }
+}
