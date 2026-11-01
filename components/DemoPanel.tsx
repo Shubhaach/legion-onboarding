@@ -55,7 +55,7 @@ export function DemoPanel() {
           style={{
             width: 380,
             maxWidth: "100%",
-            maxHeight: "min(70vh, 640px)",
+            maxHeight: "min(60vh, 640px)",
             overflowY: "auto",
             background: "#fff",
             border: "1px solid var(--line-2)",
@@ -163,6 +163,7 @@ export function DemoPanel() {
               className="btn2"
               onClick={async () => {
                 await act("fast_forward");
+                setOpen(false); // don't cover the Join button on small screens
                 router.push("/visit");
               }}
             >
