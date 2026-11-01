@@ -25,4 +25,6 @@ Marker format: `[REDACTED: <type> – <reason>]`, e.g. `[REDACTED: API key – c
 
 | File | Location | What was redacted | Reason |
 |---|---|---|---|
-| | | | |
+| `02-claude-code-01-build.jsonl` | 3 occurrences (session context attached by Claude Code) | Founder's email address → `[REDACTED: email]` | Unrelated personal information |
+| `02-claude-code-01-build.jsonl` | 2 occurrences (`npx vercel login` output) | One-time Vercel device login code → `[REDACTED: Vercel device code]` | Credential (already used and expired) |
+| `02-claude-code-01-build.jsonl` | 2 occurrences (`gh auth status` output) | GitHub token, already shown masked by the gh CLI → `[REDACTED: GitHub token (already masked by gh CLI)]` | Credential |
