@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Web 2 Is this you</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#2B47D6}a:hover{color:#1A2F9E}
+.brand{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#0B0B0C}
+.eb{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#2B47D6}
+.h1{margin:0;font-size:40px;line-height:1.15;font-weight:500;letter-spacing:-.02em}
+.sub{margin:0;font-size:17px;line-height:1.55;color:#55555C}
+.card{border:1px solid #E4E4E7;border-radius:16px;padding:20px 22px;display:flex;flex-direction:column;gap:14px}
+.row{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.lbl{font-size:13px;color:#55555C}
+.val{font-size:16px;font-weight:500;margin-top:3px}
+.src{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;background:#EEF1FD;color:#2236A8;padding:3px 6px;border-radius:4px;white-space:nowrap}
+.ok{display:flex;align-items:center;gap:6px;font-size:14px;color:#0F6B3A;font-weight:500}
+.btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 30px;border:0;border-radius:26px;background:#2B47D6;color:#fff;font-family:inherit;font-size:16px;font-weight:600}
+.ghost{height:44px;border:0;background:transparent;color:#2B47D6;font-family:inherit;font-size:15px;font-weight:500;padding:0}
+</style>
+</helmet>
+<div style="min-height: 900px; background: #FFFFFF; font-family: 'Inter', system-ui, sans-serif; color: #0B0B0C; display: flex; flex-direction: column">
+  <header style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap; padding: 18px 40px; border-bottom: 1px solid #EEEEF0">
+    <span class="brand" style="flex: 1 1 160px">Legion Health</span>
+    <div style="flex: 0 1 360px; display: flex; align-items: center; gap: 12px">
+      <div style="flex: 1; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px">
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #E4E4E7"></div>
+        <div style="height: 4px; border-radius: 2px; background: #E4E4E7"></div>
+        <div style="height: 4px; border-radius: 2px; background: #E4E4E7"></div>
+        <div style="height: 4px; border-radius: 2px; background: #E4E4E7"></div>
+        <div style="height: 4px; border-radius: 2px; background: #E4E4E7"></div>
+      </div>
+      <span class="lbl" style="white-space: nowrap">2 of 7</span>
+    </div>
+    <div style="flex: 1 1 160px; display: flex; justify-content: flex-end"><a href="#" class="lbl" style="text-decoration: none">Sign out</a></div>
+  </header>
+  <main style="flex: 1; width: 100%; max-width: 760px; margin: 0 auto; box-sizing: border-box; padding: 72px 24px 64px; display: flex; flex-direction: column; gap: 28px">
+    <div style="display: flex; flex-direction: column; gap: 14px">
+      <span class="eb">Confirm your details</span>
+      <h1 class="h1">Is this you?</h1>
+      <p class="sub">We found this from your number. Tell us if anything is off.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px">
+      <div class="card">
+        <div class="row">
+          <div><div class="lbl">Name</div><div class="val">Jordan Reyes</div></div>        </div>
+        <div><div class="lbl">Date of birth</div><div class="val">Mar 14, 1992</div></div>
+        <div><div class="lbl">Home address</div><div class="val">1100 Congress Ave, Austin, TX 78701</div></div>
+        <div class="ok"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>In Texas. Legion can see you.</div>
+      </div>
+      <div class="card">
+        <div class="row">
+          <div><div class="lbl">Insurance</div><div class="val">Blue Cross Blue Shield of Texas PPO</div></div>
+          <span class="src">Sohar</span>
+        </div>
+        <div><div class="lbl">Member ID</div><div class="val">XYZ ••• 4821</div></div>
+        <div class="ok"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>In network for psychiatry</div>
+        <div class="row" style="align-items: center; border-top: 1px solid #F0F0F2; padding-top: 14px; margin-top: auto">
+          <span style="font-size: 15px">Estimated visit cost</span>
+          <span style="font-size: 20px; font-weight: 600">$30 copay</span>
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 28px; flex-wrap: wrap; margin-top: 8px">
+      <button class="btn" type="button">Yes, that's me <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+      <button class="ghost" type="button">Something's wrong</button>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

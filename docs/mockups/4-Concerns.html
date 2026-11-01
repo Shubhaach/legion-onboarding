@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Web 4 What's going on</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#2B47D6}a:hover{color:#1A2F9E}
+.brand{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#0B0B0C}
+.eb{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#2B47D6}
+.h1{margin:0;font-size:40px;line-height:1.15;font-weight:500;letter-spacing:-.02em}
+.card{border:1px solid #E4E4E7;border-radius:16px;padding:20px 22px;display:flex;flex-direction:column;gap:14px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.lbl{font-size:13px;color:#55555C}
+.src{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;background:#EEF1FD;color:#2236A8;padding:3px 6px;border-radius:4px;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 30px;border:0;border-radius:26px;background:#2B47D6;color:#fff;font-family:inherit;font-size:16px;font-weight:600}
+.chip{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border-radius:20px;font-family:inherit;font-size:15px;border:1px solid #D4D4D8;background:#fff;color:#0B0B0C}
+.chip.on{background:#0B0B0C;border-color:#0B0B0C;color:#fff}
+.seg{display:inline-flex;border:1px solid #D4D4D8;border-radius:10px;overflow:hidden;flex:none}
+.seg button{height:44px;padding:0 18px;border:0;background:#fff;font-family:inherit;font-size:14px;color:#0B0B0C}
+.seg .on{background:#0B0B0C;color:#fff}
+.back{font-size:14px;color:#55555C;text-decoration:none}
+</style>
+</helmet>
+<div style="min-height: 900px; background: #FFFFFF; font-family: 'Inter', system-ui, sans-serif; color: #0B0B0C; display: flex; flex-direction: column">
+  <header style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap; padding: 18px 40px; border-bottom: 1px solid #EEEEF0">
+    <span class="brand" style="flex: 1 1 160px">Legion Health</span>
+    <div style="flex: 0 1 360px; display: flex; align-items: center; gap: 12px">
+      <div style="flex: 1; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px">
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #E4E4E7"></div>
+        <div style="height: 4px; border-radius: 2px; background: #E4E4E7"></div>
+        <div style="height: 4px; border-radius: 2px; background: #E4E4E7"></div>
+      </div>
+      <span class="lbl" style="white-space: nowrap">4 of 7</span>
+    </div>
+    <div style="flex: 1 1 160px; display: flex; justify-content: flex-end"><a href="#" class="lbl" style="text-decoration: none">Sign out</a></div>
+  </header>
+  <main style="flex: 1; width: 100%; max-width: 640px; margin: 0 auto; box-sizing: border-box; padding: 72px 24px 64px; display: flex; flex-direction: column; gap: 28px">
+    <div style="display: flex; flex-direction: column; gap: 14px">
+      <span class="eb">What's going on</span>
+      <h1 class="h1">In your own words, what brings you in?</h1>
+    </div>
+    <label style="display: flex; flex-direction: column; gap: 10px">
+      <span class="lbl">Type or speak. A sentence is enough.</span>
+      <textarea readonly="readonly" style="height: 120px; box-sizing: border-box; border: 1px solid #D4D4D8; border-radius: 14px; padding: 14px 16px; font-family: inherit; font-size: 17px; line-height: 1.5; color: #0B0B0C; resize: none">Trouble sleeping and feeling on edge at work for a few months.</textarea>
+    </label>
+    <button type="button" class="chip" style="align-self: flex-start; margin-top: -12px">
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="5.5" y="1.5" width="5" height="8.5" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.5"></rect><path d="M3 7.5a5 5 0 0 0 10 0M8 12.5v2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+      Speak instead
+    </button>
+    <div style="display: flex; flex-direction: column; gap: 12px">
+      <div class="row" style="justify-content: flex-start"><span style="font-size: 15px; font-weight: 500">We heard</span><span class="src">AI summary</span></div>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px">
+        <button type="button" class="chip on">Anxiety</button>
+        <button type="button" class="chip on">Trouble sleeping</button>
+        <button type="button" class="chip">+ Add</button>
+      </div>
+    </div>
+    <div class="card">
+      <span class="lbl">From your past records</span>
+      <div class="row">
+        <span style="font-size: 16px; font-weight: 500">Generalized anxiety, diagnosed 2024</span>
+        <div style="display: flex; align-items: center; gap: 12px">
+          <span class="lbl">Still relevant?</span>
+          <div class="seg"><button type="button" class="on">Yes</button><button type="button">No</button></div>
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 28px; flex-wrap: wrap">
+      <button class="btn" type="button">Continue <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+      <a href="#" class="back">← Back</a>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>
