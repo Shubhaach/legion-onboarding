@@ -22,44 +22,57 @@ export function FlowProvider({ children }: { children: React.ReactNode }) {
   const [demoOpen, setDemoOpen] = useState(false);
   const pathname = usePathname();
 
-  const refresh = useCallback(async () => {
-    try {
-      const res = await fetch("/api/session", { cache: "no-store" });
-      const v = (await res.json()) as View;
-      setView(v);
-      return v;
-    } catch {
-      return null;
-    }
+  // Every session request goes through one queue. Requests never overlap, so a slow poll
+  // can't land after an action and overwrite newer state (in the view or in the cookie).
+  const queue = useRef<Promise<unknown>>(Promise.resolve());
+  const enqueue = useCallback(<T,>(job: () => Promise<T>): Promise<T> => {
+    const run = queue.current.then(job, job);
+    queue.current = run.catch(() => undefined);
+    return run;
   }, []);
 
-  const act = useCallback(async (type: string, payload: Record<string, unknown> = {}) => {
-    const res = await fetch("/api/action", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ type, ...payload }),
-    });
-    const body = (await res.json()) as View & { ok?: boolean; error?: string };
-    if (type === "sign_out") {
-      setView(null);
-      await refresh();
-      return { ok: true };
-    }
-    if ("session" in body) setView(body);
-    return { ok: res.ok && !!body.ok, error: body.error, view: body };
-  }, [refresh]);
+  const refresh = useCallback(
+    () =>
+      enqueue(async () => {
+        try {
+          const res = await fetch("/api/session", { cache: "no-store" });
+          const v = (await res.json()) as View;
+          setView(v);
+          return v;
+        } catch {
+          return null;
+        }
+      }),
+    [enqueue],
+  );
 
-  // Re-read the session on every navigation (state is set in the async callback).
+  const act = useCallback(
+    (type: string, payload: Record<string, unknown> = {}) =>
+      enqueue(async () => {
+        const res = await fetch("/api/action", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ type, ...payload }),
+        });
+        const body = (await res.json()) as View & { ok?: boolean; error?: string };
+        if (type === "sign_out") {
+          setView(null);
+          return { ok: true };
+        }
+        if ("session" in body) setView(body);
+        return { ok: res.ok && !!body.ok, error: body.error, view: body as View };
+      }).then(async (r) => {
+        if (type === "sign_out") await refresh();
+        return r;
+      }),
+    [enqueue, refresh],
+  );
+
+  // Re-read the session on every navigation.
   useEffect(() => {
-    let alive = true;
-    fetch("/api/session", { cache: "no-store" })
-      .then((r) => r.json() as Promise<View>)
-      .then((v) => alive && setView(v))
-      .catch(() => {});
-    return () => {
-      alive = false;
-    };
-  }, [pathname]);
+    const id = setTimeout(() => void refresh(), 0);
+    return () => clearTimeout(id);
+  }, [pathname, refresh]);
 
   const pending = !!view?.lookups && Object.values(view.lookups).some((l) => l.status === "pending");
   useEffect(() => {
