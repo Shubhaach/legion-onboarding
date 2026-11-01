@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Web 3 Safety check</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#2B47D6}a:hover{color:#1A2F9E}
+.brand{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#0B0B0C}
+.eb{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#2B47D6}
+.h1{margin:0;font-size:40px;line-height:1.15;font-weight:500;letter-spacing:-.02em}
+.sub{margin:0;font-size:17px;line-height:1.55;color:#55555C}
+.lbl{font-size:13px;color:#55555C}
+.opt{display:block;width:100%;height:60px;box-sizing:border-box;border:1px solid #D4D4D8;border-radius:14px;background:#fff;text-align:left;padding:0 22px;font-family:inherit;font-size:17px;color:#0B0B0C}
+.back{font-size:14px;color:#55555C;text-decoration:none}
+</style>
+</helmet>
+<div style="min-height: 900px; background: #FFFFFF; font-family: 'Inter', system-ui, sans-serif; color: #0B0B0C; display: flex; flex-direction: column">
+  <header style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap; padding: 18px 40px; border-bottom: 1px solid #EEEEF0">
+    <span class="brand" style="flex: 1 1 160px">Legion Health</span>
+    <div style="flex: 0 1 360px; display: flex; align-items: center; gap: 12px">
+      <div style="flex: 1; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px">
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #E4E4E7"></div>
+        <div style="height: 4px; border-radius: 2px; background: #E4E4E7"></div>
+        <div style="height: 4px; border-radius: 2px; background: #E4E4E7"></div>
+        <div style="height: 4px; border-radius: 2px; background: #E4E4E7"></div>
+      </div>
+      <span class="lbl" style="white-space: nowrap">3 of 7</span>
+    </div>
+    <div style="flex: 1 1 160px; display: flex; justify-content: flex-end"><a href="#" class="lbl" style="text-decoration: none">Sign out</a></div>
+  </header>
+  <main style="flex: 1; width: 100%; max-width: 640px; margin: 0 auto; box-sizing: border-box; padding: 120px 24px 64px; display: flex; flex-direction: column; gap: 28px">
+    <div style="display: flex; flex-direction: column; gap: 14px">
+      <span class="eb">Safety check</span>
+      <h1 class="h1">Are you currently thinking about harming yourself or someone else?</h1>
+      <p class="sub">We ask everyone before booking. If you're in immediate danger, call 911. You can also call or text 988.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px">
+      <button class="opt" type="button">Yes</button>
+      <button class="opt" type="button">No</button>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap">
+      <a href="#" class="back">← Back</a>
+      <span class="lbl">A "Yes" connects you to crisis support right away.</span>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

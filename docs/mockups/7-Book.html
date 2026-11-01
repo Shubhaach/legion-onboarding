@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Web 7 Review and book</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#2B47D6}a:hover{color:#1A2F9E}
+.brand{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#0B0B0C}
+.eb{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#2B47D6}
+.mono{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#55555C}
+.h1{margin:0;font-size:40px;line-height:1.15;font-weight:500;letter-spacing:-.02em}
+.card{border:1px solid #E4E4E7;border-radius:16px;padding:20px 22px;display:flex;flex-direction:column;gap:14px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.lbl{font-size:13px;color:#55555C}
+.src{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;background:#EEF1FD;color:#2236A8;padding:3px 6px;border-radius:4px;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 30px;border:0;border-radius:26px;background:#2B47D6;color:#fff;font-family:inherit;font-size:16px;font-weight:600}
+.av{width:44px;height:44px;border-radius:10px;background:#F3F4F6;color:#3A3A40;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;flex:none}
+.doc{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:48px;padding:0 4px;border-bottom:1px solid #F0F0F2;font-size:15px;color:#0B0B0C;text-decoration:none}
+.in{height:48px;box-sizing:border-box;border:1px solid #D4D4D8;border-radius:12px;padding:0 16px;font-family:inherit;font-size:17px;color:#0B0B0C;width:100%}
+.back{font-size:14px;color:#55555C;text-decoration:none}
+.read{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:#0F6B3A;white-space:nowrap}
+.todo{display:inline-flex;align-items:center;height:30px;padding:0 12px;border-radius:15px;background:#EEF1FD;font-size:13px;font-weight:500;color:#2236A8;white-space:nowrap}
+</style>
+</helmet>
+<div style="min-height: 900px; background: #FFFFFF; font-family: 'Inter', system-ui, sans-serif; color: #0B0B0C; display: flex; flex-direction: column">
+  <header style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap; padding: 18px 40px; border-bottom: 1px solid #EEEEF0">
+    <span class="brand" style="flex: 1 1 160px">Legion Health</span>
+    <div style="flex: 0 1 360px; display: flex; align-items: center; gap: 12px">
+      <div style="flex: 1; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px">
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+      </div>
+      <span class="lbl" style="white-space: nowrap">7 of 7</span>
+    </div>
+    <div style="flex: 1 1 160px; display: flex; justify-content: flex-end"><a href="#" class="lbl" style="text-decoration: none">Sign out</a></div>
+  </header>
+  <main style="flex: 1; width: 100%; max-width: 920px; margin: 0 auto; box-sizing: border-box; padding: 56px 24px 56px; display: flex; flex-direction: column; gap: 24px">
+    <div style="display: flex; flex-direction: column; gap: 12px">
+      <span class="eb">Confirm</span>
+      <h1 class="h1">Review and book</h1>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 16px; align-items: start">
+      <div class="card">
+        <span class="mono">Your visit</span>
+        <div class="row" style="flex-wrap: nowrap">
+          <div style="display: flex; gap: 14px; align-items: center">
+            <div class="av">MC</div>
+            <div><div style="font-size: 17px; font-weight: 600">Maya Chen, PMHNP</div><div class="lbl">Tue, Nov 3 · 6:00 PM CT · 60-min video</div></div>
+          </div>
+          <a href="#" style="font-size: 14px; font-weight: 500; text-decoration: none">Change</a>
+        </div>
+        <div class="row" style="border-top: 1px solid #F0F0F2; padding-top: 14px">
+          <span style="font-size: 15px">Estimated cost <span class="src">Sohar</span></span>
+          <span style="font-size: 17px; font-weight: 600">$30 copay</span>
+        </div>
+        <div class="row">
+          <span style="font-size: 15px">Card for copay</span>
+          <span style="font-size: 15px; font-weight: 500">Visa •• 4242 <a href="#" style="font-weight: 500; text-decoration: none; margin-left: 8px">Change</a></span>
+        </div>
+        <div class="row">
+          <span style="font-size: 15px">Identity <span class="src">Verified</span></span>
+          <span style="font-size: 15px; font-weight: 500; color: #0F6B3A">Checked at signup</span>
+        </div>
+      </div>
+      <div class="card">
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <span class="mono">Agreements</span>
+          <span class="lbl">Open each one and scroll to the end. It's marked read only then.</span>
+          <div style="display: flex; align-items: center; gap: 10px; margin-top: 6px"><div style="flex: 1; height: 4px; border-radius: 2px; background: #E4E4E7"><div style="width: 60%; height: 4px; border-radius: 2px; background: #0F6B3A"></div></div><span class="lbl" style="white-space: nowrap">3 of 5 read</span></div>
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <a href="#" class="doc">Consent to treatment and telehealth<span class="read"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Read</span></a>
+          <a href="#" class="doc">Medication history authorization<span class="read"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Read</span></a>
+          <a href="#" class="doc">[Agreement 3 title]<span class="read"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Read</span></a>
+          <a href="#" class="doc">Controlled substance policy<span class="todo">Open to read</span></a>
+          <a href="#" class="doc" style="border-bottom: 0">Financial agreement<span class="todo">Open to read</span></a>
+        </div>
+        <label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: #55555C">Sign with your full name<input class="in" value="Jordan Reyes" disabled="disabled" style="background: #F7F7F8; color: #6B6B73"></label>
+        <label style="display: flex; gap: 12px; align-items: center; font-size: 15px; color: #6B6B73">
+          <input type="checkbox" disabled="disabled" style="width: 20px; height: 20px; margin: 0; flex: none">
+          I've read and agree to these agreements
+        </label>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 28px; flex-wrap: wrap">
+      <span class="lbl">Read the last 2 agreements to book.</span>
+      <button class="btn" type="button" disabled="disabled" style="background: #C7CEF2; color: #FFFFFF">Book visit <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+      <a href="#" class="back">← Back</a>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

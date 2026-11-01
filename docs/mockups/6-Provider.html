@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Web 6 Provider and time</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#2B47D6}a:hover{color:#1A2F9E}
+.brand{font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:#0B0B0C}
+.eb{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#2B47D6}
+.mono{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#55555C}
+.h1{margin:0;font-size:40px;line-height:1.15;font-weight:500;letter-spacing:-.02em}
+.sub{margin:0;font-size:16px;line-height:1.5;color:#55555C}
+.card{border:1px solid #E4E4E7;border-radius:16px;padding:18px 22px;display:flex;flex-direction:column;gap:14px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.lbl{font-size:13px;color:#55555C}
+.src{font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;background:#EEF1FD;color:#2236A8;padding:3px 6px;border-radius:4px;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 30px;border:0;border-radius:26px;background:#2B47D6;color:#fff;font-family:inherit;font-size:16px;font-weight:600}
+.av{width:44px;height:44px;border-radius:10px;background:#F3F4F6;color:#3A3A40;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;flex:none}
+.tag{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:12px;background:#F3F4F6;font-size:12px;color:#3A3A40}
+.radio{width:20px;height:20px;border-radius:10px;border:1.5px solid #B4B4BB;box-sizing:border-box;flex:none}
+.radio.on{border:6px solid #2B47D6}
+.day{flex:none;width:104px;box-sizing:border-box;border:1px solid #E4E4E7;border-radius:12px;background:#fff;padding:10px 12px;text-align:left;font-family:inherit;color:#0B0B0C;display:flex;flex-direction:column;gap:2px}
+.day.on{border:2px solid #2B47D6;background:#F5F7FE}
+.time{height:44px;padding:0 20px;border:1px solid #D4D4D8;border-radius:10px;background:#fff;font-family:inherit;font-size:15px;color:#0B0B0C}
+.time.on{background:#0B0B0C;border-color:#0B0B0C;color:#fff}
+.back{font-size:14px;color:#55555C;text-decoration:none}
+</style>
+</helmet>
+<div style="min-height: 900px; background: #FFFFFF; font-family: 'Inter', system-ui, sans-serif; color: #0B0B0C; display: flex; flex-direction: column">
+  <header style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap; padding: 18px 40px; border-bottom: 1px solid #EEEEF0">
+    <span class="brand" style="flex: 1 1 160px">Legion Health</span>
+    <div style="flex: 0 1 360px; display: flex; align-items: center; gap: 12px">
+      <div style="flex: 1; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px">
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #2B47D6"></div>
+        <div style="height: 4px; border-radius: 2px; background: #E4E4E7"></div>
+      </div>
+      <span class="lbl" style="white-space: nowrap">6 of 7</span>
+    </div>
+    <div style="flex: 1 1 160px; display: flex; justify-content: flex-end"><a href="#" class="lbl" style="text-decoration: none">Sign out</a></div>
+  </header>
+  <main style="flex: 1; width: 100%; max-width: 760px; margin: 0 auto; box-sizing: border-box; padding: 48px 24px 48px; display: flex; flex-direction: column; gap: 20px">
+    <div class="row" style="align-items: flex-end">
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <span class="eb">Your care team</span>
+        <h1 class="h1">Pick a provider and time</h1>
+        <p class="sub">Ranked from your answers, specialty fit and real availability.</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; background: #F7F8FC; border-radius: 12px; padding: 10px 14px">
+        <span style="font-size: 14px"><strong>$30</strong> per visit with your plan</span>
+        <span class="src">Sohar</span>
+      </div>
+    </div>
+    <div class="card" style="border: 2px solid #2B47D6">
+      <div style="display: flex; gap: 14px; align-items: center">
+        <div class="av">MC</div>
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 4px">
+          <span class="mono" style="color: #2B47D6">Recommended</span>
+          <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap">
+            <span style="font-size: 18px; font-weight: 600">Maya Chen</span>
+            <span class="lbl">PMHNP</span>
+            <span class="tag">Anxiety</span>
+            <span class="tag">Sleep</span>
+          </div>
+        </div>
+        <span class="radio on" aria-hidden="true"></span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; border-top: 1px solid #F0F0F2; padding-top: 14px">
+        <span class="mono">Choose a day</span>
+        <div style="display: flex; gap: 8px; overflow-x: auto">
+          <button type="button" class="day on"><span class="mono" style="color: #2B47D6">Tue</span><span style="font-size: 16px; font-weight: 600">Nov 3</span><span class="lbl">3 open</span></button>
+          <button type="button" class="day"><span class="mono">Wed</span><span style="font-size: 16px; font-weight: 600">Nov 4</span><span class="lbl">2 open</span></button>
+          <button type="button" class="day"><span class="mono">Thu</span><span style="font-size: 16px; font-weight: 600">Nov 5</span><span class="lbl">4 open</span></button>
+          <button type="button" class="day"><span class="mono">Mon</span><span style="font-size: 16px; font-weight: 600">Nov 9</span><span class="lbl">1 open</span></button>
+          <button type="button" class="day"><span class="mono">Tue</span><span style="font-size: 16px; font-weight: 600">Nov 10</span><span class="lbl">5 open</span></button>
+        </div>
+        <span class="mono" style="margin-top: 6px">Available times · Central</span>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap">
+          <button type="button" class="time on">6:00 PM</button>
+          <button type="button" class="time">7:00 PM</button>
+          <button type="button" class="time">7:30 PM</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="flex-direction: row; align-items: center">
+      <div class="av">DO</div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 4px">
+        <span class="mono" style="color: #2B47D6">Soonest available</span>
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap"><span style="font-size: 17px; font-weight: 600">Daniel Ortiz</span><span class="lbl">PMHNP</span><span class="tag">Depression</span></div>
+        <span class="lbl">Next opening: Mon, Nov 2 · 12:00 PM CT</span>
+      </div>
+      <a href="#" style="font-size: 14px; font-weight: 500; text-decoration: none; white-space: nowrap">View times →</a>
+    </div>
+    <div class="card" style="flex-direction: row; align-items: center">
+      <div class="av">ER</div>
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 4px">
+        <span class="mono" style="color: #2B47D6">Recommended</span>
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap"><span style="font-size: 17px; font-weight: 600">Elena Ruiz</span><span class="lbl">PMHNP</span><span class="tag">Anxiety</span></div>
+        <span class="lbl">Next opening: Wed, Nov 4 · 8:00 AM CT</span>
+      </div>
+      <a href="#" style="font-size: 14px; font-weight: 500; text-decoration: none; white-space: nowrap">View times →</a>
+    </div>
+    <div style="display: flex; align-items: center; gap: 28px; flex-wrap: wrap; margin-top: 4px">
+      <button class="btn" type="button">Continue with Tue, Nov 3 · 6:00 PM <svg width="18" height="18" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+      <a href="#" class="back">← Back</a>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>
