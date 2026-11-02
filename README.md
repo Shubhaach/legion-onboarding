@@ -49,7 +49,7 @@ Answering **Yes** on the safety check (screen 3) always goes to the crisis scree
 | Sohar (coverage, copay) | **Mocked** from `coverage.json` (1.2–1.5 s). Sandbox adapter is a stub |
 | Metriport (records) | **Mocked** from `records.json` (4–5 s; "records slow" never arrives). Sandbox adapter is a stub |
 | DoseSpot (meds, pharmacy) | **Mocked** from `medications.json` (1 s) |
-| Claude (screen 4 concerns) | **Real** when `ANTHROPIC_API_KEY` is set (Claude Opus 5.5, structured output limited to the fixed list). Otherwise keyword mapping. The demo panel shows which one ran |
+| Claude (screen 4 concerns) | **Real** when `ANTHROPIC_API_KEY` is set (Claude Opus 5.5, structured output limited to the fixed list). **The key is set on the live deployment**: all 3 examples in `concerns.json` return the expected concerns from Claude in about 2 s. Without a key, or on any error, keyword mapping is used. The demo panel shows which one ran |
 | Text code, SMS reminders | **Mocked.** Any code works; texts appear in the demo panel, none are sent |
 | Payment | **Mocked.** Test card 4242 4242 4242 4242 only; nothing is charged |
 | Video visit | **Mocked** room with a provider placeholder |
