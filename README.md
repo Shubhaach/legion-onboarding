@@ -5,7 +5,7 @@ A working prototype of Legion Health's patient onboarding, rebuilt so data is **
 - **Live prototype:** https://legion-onboarding-theta.vercel.app (synthetic data only)
 - **Walkthrough video (~5 min):** _link to be added_
 - **PRD:** [`docs/PRD.md`](docs/PRD.md) · **Decisions and trade-offs:** [`docs/decisions.md`](docs/decisions.md) · **Data sources and what each adds:** [`docs/data-sources.md`](docs/data-sources.md) · **Baseline funnel:** [`docs/current-funnel.md`](docs/current-funnel.md) · **Brief:** [`docs/brief.md`](docs/brief.md)
-- **AI interaction history:** [`docs/ai-history/`](docs/ai-history/). Redaction rules and the redaction log are in [`docs/ai-history/README.md`](docs/ai-history/README.md).
+- **AI interaction history:** [`docs/ai-history/`](docs/ai-history/) (Claude Code build session) and the [Claude planning chat](https://claude.ai/share/62e5fa94-5c8b-4c72-9ab2-c04e6ee85155) (research, PRD, designs). Redaction rules and the redaction log are in [`docs/ai-history/README.md`](docs/ai-history/README.md).
 
 ## Try it in 2 minutes
 

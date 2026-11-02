@@ -8,7 +8,7 @@ No selected excerpts and no reconstructed summaries.
 
 | File | Thread | Tool |
 |---|---|---|
-| `01-planning-chat.*` | Research, journey mapping, PRD, design (this planning thread) | Claude (claude.ai) |
+| `01-planning-chat.*` | Research, journey mapping, PRD, design (this planning thread). Shared link: https://claude.ai/share/62e5fa94-5c8b-4c72-9ab2-c04e6ee85155 | Claude (claude.ai) |
 | `02-claude-code-*.*` | Every Claude Code session, one file each | Claude Code |
 | `03-*.*` | Any other AI tool used | — |
 
@@ -25,6 +25,8 @@ Marker format: `[REDACTED: <type> – <reason>]`, e.g. `[REDACTED: API key – c
 
 | File | Location | What was redacted | Reason |
 |---|---|---|---|
-| `02-claude-code-01-build.jsonl` | 3 occurrences (session context attached by Claude Code) | Founder's email address → `[REDACTED: email]` | Unrelated personal information |
-| `02-claude-code-01-build.jsonl` | 2 occurrences (`npx vercel login` output) | One-time Vercel device login code → `[REDACTED: Vercel device code]` | Credential (already used and expired) |
-| `02-claude-code-01-build.jsonl` | 2 occurrences (`gh auth status` output) | GitHub token, already shown masked by the gh CLI → `[REDACTED: GitHub token (already masked by gh CLI)]` | Credential |
+| `02-claude-code-01-build.jsonl` | 38 occurrences (session context attached by Claude Code, and the redaction scan commands that searched for it) | Founder's email address → `[REDACTED: email]` | Unrelated personal information |
+| `02-claude-code-01-build.jsonl` | 29 occurrences (`npx vercel login` output, and later mentions of it) | One-time Vercel device login code → `[REDACTED: Vercel device code]` | Credential (already used and expired) |
+| `02-claude-code-01-build.jsonl` | 10 occurrences (`gh auth status` output, and later scans for it) | GitHub token, already shown masked by the gh CLI → `[REDACTED: GitHub token (already masked by gh CLI)]` | Credential |
+
+`02-claude-code-01-build.jsonl` was re-copied on 2026-11-01 with everything up to the walkthrough video and voice work. Nothing else was changed. The OpenAI API key added for the narration voice never appears in it: only its variable name, length and prefix were checked.
