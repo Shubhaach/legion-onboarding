@@ -7,7 +7,7 @@ From the take-home brief, section 1 ("Goal"). Tick each before submitting.
 | 1 | **Working prototype, deployed** | Public URL; happy path and every fallback scenario run end to end, through **first visit completed** | Vercel URL in `README.md` |
 | 2 | **Repository** | Clean history, README a reviewer can follow in 2 minutes, `.env.example`, tests pass | GitHub |
 | 3 | **Open pull request** | PR stays **open**, not merged. Description uses `.github/pull_request_template.md` | GitHub |
-| 4 | **Recorded walkthrough, about 5 minutes** | The most important decisions and trade-offs, shown in the live prototype | Link in `README.md` and the PR. Script: `docs/walkthrough-script.md` |
+| 4 | **Recorded walkthrough, about 5 minutes** | The most important decisions and trade-offs, shown in the live prototype | Link in `README.md` and the PR. Script: `docs/walkthrough/script.md` |
 | 5 | **Complete AI interaction history** | Every prompt, response, follow-up, retry and correction, across all tools and threads. Unedited. Only credentials, secrets or unrelated personal information redacted, each redaction labelled | `docs/ai-history/` (see its README) |
 | 6 | **No real patient information** | Synthetic data only, everywhere: code, fixtures, screenshots, video, history | Whole repo |
 

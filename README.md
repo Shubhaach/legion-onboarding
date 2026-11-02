@@ -108,6 +108,10 @@ components/          header, demo panel, manual form, insurance choice, agreemen
 lib/                 session (signed cookies), adapters/ (identity, coverage, records, meds), state (actions + events),
                      flow (screen order), providers (ranking), concerns (+ Claude), time (Central time), funnel
 data/fixtures/       synthetic scenarios, patients, coverage, records, meds, providers, agreements, reminders
-docs/                brief, PRD, decisions, data sources, funnel baseline, walkthrough script, mockups, AI history
-tests/e2e/           Playwright
+docs/                brief, PRD, decisions, data sources, funnel baseline, mockups, screenshots, AI history
+                     (index: docs/README.md)
+docs/walkthrough/    video script, deck, narration, captions
+scripts/walkthrough/ builds the walkthrough video (npm run walkthrough)
+tests/e2e/           Playwright scenario tests (npm test)
+tests/screens/       screenshot capture (npm run screenshots)
 ```

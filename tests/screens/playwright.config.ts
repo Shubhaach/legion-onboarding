@@ -1,9 +1,9 @@
 import { defineConfig, devices } from "@playwright/test";
 
-// Captures docs/screenshots/<scenario>/ from a running app:
-//   BASE_URL=https://legion-onboarding-theta.vercel.app npx playwright test -c playwright.screens.config.ts
+// Captures docs/screenshots/<scenario>/ from a running app (run from the repo root):
+//   BASE_URL=https://legion-onboarding-theta.vercel.app npm run screenshots
 export default defineConfig({
-  testDir: "./tests/screens",
+  testDir: ".",
   timeout: 120_000,
   expect: { timeout: 15_000 },
   workers: 3,

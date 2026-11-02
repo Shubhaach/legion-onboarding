@@ -11,7 +11,7 @@ Build a working, deployed web prototype of Legion Health's new patient onboardin
 2. This repo with an **open pull request** (do not merge it), described with `.github/pull_request_template.md`.
 3. A README a reviewer can follow in 2 minutes: what it is, live URL, how to run, demo scenarios,
    what's mocked vs real, links to PRD, decisions and walkthrough video.
-4. The founder records a ~5 min walkthrough (`docs/walkthrough-script.md`). Make every key decision visible in the UI.
+4. The founder records a ~5 min walkthrough (`docs/walkthrough/script.md`). Make every key decision visible in the UI.
 5. Complete AI history in `docs/ai-history/`. Never paste secrets into prompts, code or logs.
 
 Onboarding ends at **first visit completed**, not at booking. The prototype runs through the
