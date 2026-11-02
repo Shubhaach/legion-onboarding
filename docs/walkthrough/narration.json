@@ -1,0 +1,76 @@
+{
+  "_note": "Walkthrough narration, in order. kind=slide shows deck page `slide` (1-based) while the narration plays. kind=demo drives the live prototype; each step's narration plays while that step is on screen, and the step holds for exactly the narration length. All demo data is synthetic.",
+  "liveUrl": "https://legion-onboarding-theta.vercel.app",
+  "targetLength": "about 5 minutes",
+  "segments": [
+    { "id": "s1-cover", "kind": "slide", "slide": 1,
+      "text": "Hi, I'm Shubhaa. This is my take-home for Legion Health: Texas patient onboarding, rebuilt to be AI-native. Here, onboarding ends when the first visit is completed, not when it's booked." },
+
+    { "id": "s2-problem", "kind": "slide", "slide": 2,
+      "text": "Today, of 5,898 sessions in thirty days, only 23.8 percent reach the payment page. Three steps lose 3,376 sessions: the conditions list, choosing a provider, and creating an account. And nothing is tracked after payment, so no one can see who completes a first visit." },
+
+    { "id": "s3-whynow", "kind": "slide", "slide": 3,
+      "text": "Why now? Lifting start to payment from 24 to 30 percent means about 360 more patients a month reaching checkout, with no new acquisition spend. The data vendors are already live, but intake doesn't use them. And Rula and Grow book in minutes, with cost shown first." },
+
+    { "id": "s4-idea", "kind": "slide", "slide": 4,
+      "text": "So the solution is pull, then confirm, with a human in the loop. The patient gives a phone number, date of birth and one consent. We pull identity, insurance, records and medications in parallel, and the patient confirms instead of typing. If a pull fails, the patient simply answers. No second vendor." },
+
+    { "id": "s5-flow", "kind": "slide", "slide": 5,
+      "text": "That gives seven screens: the fewest where each screen does a single job. Safety stays separate, and every step is measurable, all the way to the first visit. Let me show it live." },
+
+    { "id": "d1-start", "kind": "demo", "scenario": "happy", "phone": "5125550142", "route": "/start",
+      "action": "Type phone (512) 555-0142 and the scenario's date of birth, tick the consent, submit, enter any 6-digit code.",
+      "text": "The patient enters a phone number and date of birth, gives one consent, and types a text code. That's almost all they'll type." },
+
+    { "id": "d2-confirm", "kind": "demo", "scenario": "happy", "route": "/confirm",
+      "action": "Show the pre-filled screen with the demo panel open; hover the copay. Continue.",
+      "text": "Screen two is already filled in: name, address, insurance and a thirty-dollar copay. The panel on the right shows each lookup landing. Patients never see vendor names." },
+
+    { "id": "d3-safety", "kind": "demo", "scenario": "happy", "route": "/safety",
+      "action": "Hover Yes, then choose No and continue.",
+      "text": "Screen three is safety. It's always asked and never automated. A yes goes straight to crisis support, never to booking." },
+
+    { "id": "d4-concerns", "kind": "demo", "scenario": "happy", "route": "/concerns",
+      "action": "Type: Trouble sleeping and feeling on edge at work for a few months. Wait for the AI tags, then continue.",
+      "text": "On screen four, the patient says what's going on in their own words. AI maps it to a fixed list of concerns, and the patient confirms." },
+
+    { "id": "d5-snapshot", "kind": "demo", "scenario": "happy", "route": "/snapshot",
+      "action": "Scroll through the pulled medications and records; answer the hospital-stay and pharmacy questions; continue.",
+      "text": "Screen five shows what we pulled, medications and past records, for the patient to confirm or correct." },
+
+    { "id": "d6-provider", "kind": "demo", "scenario": "happy", "route": "/provider",
+      "action": "Pick the first provider, then a day, then a time.",
+      "text": "Screen six is Legion's ranked provider list. Pick a provider, then a day, then a time." },
+
+    { "id": "d7-book", "kind": "demo", "scenario": "happy", "route": "/book",
+      "action": "Show Book disabled. Open each agreement and scroll it to the end; enter test card 4242 4242 4242 4242; Book.",
+      "text": "On screen seven, each agreement has to be opened and read to the end before Book unlocks." },
+
+    { "id": "d8-visit", "kind": "demo", "scenario": "happy", "route": "/booked",
+      "action": "Show You're booked, join the visit, then show visit completed (use the demo panel's fast-forward if present).",
+      "text": "Then they're booked, get reminder texts, join the video visit, and the first visit is completed. That's the finish line." },
+
+    { "id": "d9-nocoverage", "kind": "demo", "scenario": "no_coverage", "phone": "5125550111", "route": "/confirm",
+      "action": "Fresh session with (512) 555-0111; land on screen 2 showing self-pay.",
+      "text": "When data is missing, the patient answers. Here no coverage is found, so self-pay is shown up front." },
+
+    { "id": "d10-recordsslow", "kind": "demo", "scenario": "records_slow", "phone": "5125550122", "route": "/concerns",
+      "action": "Fresh session with (512) 555-0122; show screens 4 to 5 asking directly.",
+      "text": "And here, records haven't come back in time, so we ask instead of making the patient wait." },
+
+    { "id": "s6-decisions", "kind": "slide", "slide": 6,
+      "text": "The key decisions follow one rule: one source per job. Verified only for identity, not Persona as well, to avoid cost, privacy exposure and conflicting data. Sohar for insurance, the only cost source shown. Metriport for records, in the background. DoseSpot for medications. And doubt always goes to a human." },
+
+    { "id": "s7-tradeoffs", "kind": "slide", "slide": 7,
+      "text": "Three trade-offs. Speed versus readiness. Book-first flows like Rula and Headway get people into a slot faster. I put safety and intake before booking, because the finish line is a completed first visit, not a booking. A slot taken by someone who needs a higher level of care, or who arrives with no history, is a wasted slot. Clicks versus safety. We pull insurance, meds and records at every step, but never use them silently. That costs a few clicks. In psychiatry a wrong medication history is a prescribing risk, so confirmation is the price of being AI-native safely. Conversion versus transparency. Showing the copay on screen 2 may lose some people early. Today they leave at step 11, after ten minutes. I'd rather they decide in thirty seconds. If completed visits per start don't rise, we revert." },
+
+    { "id": "s8-metrics", "kind": "slide", "slide": 8,
+      "text": "The north star is start to first visit completed. Start to booked is the primary metric, because it moves first, and booked to visit completed is the guardrail, so faster booking doesn't create no-shows. Rollout is gated: we stop if safety or show rate slips." },
+
+    { "id": "s9-build", "kind": "slide", "slide": 9,
+      "text": "How I built it. I used Claude to plan: the funnel analysis, research, the PRD and the designs. Claude Code then built the repo on GitHub, wrote tests that run in CI, deployed to Vercel, and opened the pull request, in about 43 minutes of autonomous work. I stayed in the loop throughout and made every product call." },
+
+    { "id": "s10-close", "kind": "slide", "slide": 10,
+      "text": "Everything is linked here: the live prototype, the open pull request, the PRD, the designs and the full AI history. Thanks for watching." }
+  ]
+}
