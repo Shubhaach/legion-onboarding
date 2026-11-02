@@ -1,0 +1,5 @@
+# Never upload local secrets, builds or test output
+.env*.local
+.next
+test-results
+playwright-report

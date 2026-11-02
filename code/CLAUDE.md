@@ -2,8 +2,8 @@
 
 Build a working, deployed web prototype of Legion Health's new patient onboarding for Texas.
 
-**Read first, in order:** `DELIVERABLES.md` → `docs/brief.md` → `docs/PRD.md` → `docs/decisions.md` →
-`docs/data-sources.md`. Screen designs: `docs/mockups/*.html` (see "Design").
+**Read first, in order:** `DELIVERABLES.md` → `../docs/brief.md` → `../docs/PRD.md` → `../docs/decisions.md` →
+`../docs/data-sources.md`. Screen designs: `../docs/mockups/*.html` (see "Design").
 
 ## Deliverables (full list in DELIVERABLES.md)
 
@@ -11,8 +11,8 @@ Build a working, deployed web prototype of Legion Health's new patient onboardin
 2. This repo with an **open pull request** (do not merge it), described with `.github/pull_request_template.md`.
 3. A README a reviewer can follow in 2 minutes: what it is, live URL, how to run, demo scenarios,
    what's mocked vs real, links to PRD, decisions and walkthrough video.
-4. The founder records a ~5 min walkthrough (`docs/walkthrough-script.md`). Make every key decision visible in the UI.
-5. Complete AI history in `docs/ai-history/`. Never paste secrets into prompts, code or logs.
+4. The founder records a ~5 min walkthrough (`../docs/walkthrough/script.md`). Make every key decision visible in the UI.
+5. Complete AI history in `../docs/ai-history/`. Never paste secrets into prompts, code or logs.
 
 Onboarding ends at **first visit completed**, not at booking. The prototype runs through the
 "You're booked" screen, a mock visit room, and a visit-completed screen.
@@ -114,7 +114,7 @@ Log to an in-memory store, show them in the demo panel, and expose `/debug/funne
 
 ## Design
 
-`docs/mockups/*.html` use a custom design-canvas runtime (`<x-dc>`, `{{ }}`); read them as markup and style
+`../docs/mockups/*.html` use a custom design-canvas runtime (`<x-dc>`, `{{ }}`); read them as markup and style
 reference only, don't run them. Tokens:
 - Ink `#0B0B0C`, secondary text `#55555C`, borders `#E4E4E7` / `#D4D4D8`, accent `#2B47D6`, success `#0F6B3A`, tint `#F7F8FC`.
 - Fonts: Inter (UI), IBM Plex Mono (uppercase eyebrows and labels, letter-spacing .12em).

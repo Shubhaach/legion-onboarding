@@ -24,3 +24,6 @@
 | Surescripts, DrFirst | Medication history | DoseSpot already provides it |
 | Bamboo (PDMP) | Controlled-substance history | A prescriber check at prescribing time, not a patient intake step |
 | Persona | Document + selfie identity check | See decision above |
+| Lab results (e.g. Quest, Labcorp via HIE or direct) | Recent labs a prescriber needs (thyroid, metabolic panel, lithium levels, pregnancy tests) | Useful after the first visit for medication management, not at intake; Metriport already returns some lab results |
+| Provider directories (NPPES NPI registry, state licensing boards, CAQH) | Verified provider credentials and Texas licence status; NPI on referrals | Legion already credentials its own providers; patients don't see this. Worth adding to verify outside referrals |
+| Wearable and patient-generated data (Apple Health, Google Health Connect, Oura, Fitbit) | Sleep, activity and heart-rate trends; between-visit symptom check-ins (PHQ-9, GAD-7) | Adds friction (account linking) and needs clinical interpretation; better as an opt-in after the first visit to support measurement-based care |

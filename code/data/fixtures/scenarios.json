@@ -1,0 +1,54 @@
+{
+  "_note": "Synthetic demo data only. No real patients. 555-01xx numbers are reserved fictional numbers. Latencies in milliseconds from screen 1 submit.",
+  "default": "happy",
+  "scenarios": [
+    {
+      "id": "happy",
+      "phone": "5125550142",
+      "label": "Happy path",
+      "patientId": "p-jordan",
+      "latencyMs": { "identity": 600, "coverage": 1200, "medications": 1000, "records": 5000 },
+      "outcomes": { "identity": "ready", "coverage": "ready", "medications": "ready", "records": "ready" }
+    },
+    {
+      "id": "no_match",
+      "phone": "5125550100",
+      "label": "Identity not matched → manual form",
+      "patientId": null,
+      "latencyMs": { "identity": 900, "coverage": 0, "medications": 0, "records": 0 },
+      "outcomes": { "identity": "not_found", "coverage": "skipped", "medications": "skipped", "records": "skipped" }
+    },
+    {
+      "id": "no_coverage",
+      "phone": "5125550111",
+      "label": "No coverage found → self-pay $250",
+      "patientId": "p-taylor",
+      "latencyMs": { "identity": 600, "coverage": 1500, "medications": 1000, "records": 4000 },
+      "outcomes": { "identity": "ready", "coverage": "not_found", "medications": "ready", "records": "ready" }
+    },
+    {
+      "id": "records_slow",
+      "phone": "5125550122",
+      "label": "Records not back by screen 4–5 → asked directly",
+      "patientId": "p-morgan",
+      "latencyMs": { "identity": 600, "coverage": 1200, "medications": 1000, "records": 120000 },
+      "outcomes": { "identity": "ready", "coverage": "ready", "medications": "ready", "records": "pending" }
+    },
+    {
+      "id": "out_of_state",
+      "phone": "4155550133",
+      "label": "California address → stopped at screen 2",
+      "patientId": "p-casey",
+      "latencyMs": { "identity": 600, "coverage": 0, "medications": 0, "records": 0 },
+      "outcomes": { "identity": "ready", "coverage": "skipped", "medications": "skipped", "records": "skipped" }
+    },
+    {
+      "id": "controlled_med",
+      "phone": "5125550155",
+      "label": "Stimulant on file → flagged for the clinician",
+      "patientId": "p-riley",
+      "latencyMs": { "identity": 600, "coverage": 1200, "medications": 1000, "records": 5000 },
+      "outcomes": { "identity": "ready", "coverage": "ready", "medications": "ready", "records": "ready" }
+    }
+  ]
+}

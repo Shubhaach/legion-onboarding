@@ -1,0 +1,394 @@
+1
+00:00:00,150 --> 00:00:01,279
+Hi, I'm Shubhaa.
+
+2
+00:00:01,279 --> 00:00:05,868
+This is my take-home for Legion
+Health: Texas patient onboarding,
+
+3
+00:00:05,868 --> 00:00:07,562
+rebuilt to be AI-native.
+
+4
+00:00:07,562 --> 00:00:13,068
+Here, onboarding ends when the first
+visit is completed, not when it's booked.
+
+5
+00:00:13,383 --> 00:00:17,305
+Today, of 5,898 sessions
+in thirty days, only 23.
+
+6
+00:00:17,305 --> 00:00:19,946
+8 percent reach the payment page.
+
+7
+00:00:19,946 --> 00:00:25,869
+Three steps lose 3,376 sessions: the
+conditions list, choosing a provider,
+
+8
+00:00:25,869 --> 00:00:27,789
+and creating an account.
+
+9
+00:00:27,789 --> 00:00:34,512
+And nothing is tracked after payment, so no
+one can see who completes a first visit.
+
+10
+00:00:34,817 --> 00:00:35,407
+Why now?
+
+11
+00:00:35,407 --> 00:00:38,800
+Lifting start to payment
+from 24 to 30 percent
+
+12
+00:00:38,800 --> 00:00:42,932
+means about 360 more patients
+a month reaching checkout,
+
+13
+00:00:42,932 --> 00:00:45,145
+with no new acquisition spend.
+
+14
+00:00:45,145 --> 00:00:49,792
+The data vendors are already live,
+but intake doesn't use them.
+
+15
+00:00:49,792 --> 00:00:53,997
+And Rula and Grow book in
+minutes, with cost shown first.
+
+16
+00:00:54,317 --> 00:00:58,366
+So the solution is pull, then
+confirm, with a human in the loop.
+
+17
+00:00:58,366 --> 00:01:02,416
+The patient gives a phone number,
+date of birth and one consent.
+
+18
+00:01:02,416 --> 00:01:06,528
+We pull identity, insurance, records
+and medications in parallel,
+
+19
+00:01:06,528 --> 00:01:09,249
+and the patient confirms
+instead of typing.
+
+20
+00:01:09,249 --> 00:01:12,033
+If a pull fails, the
+patient simply answers.
+
+21
+00:01:12,033 --> 00:01:13,109
+No second vendor.
+
+22
+00:01:13,417 --> 00:01:17,845
+That gives seven screens: the fewest
+where each screen does a single job.
+
+23
+00:01:17,845 --> 00:01:22,940
+Safety stays separate, and every step is
+measurable, all the way to the first visit.
+
+24
+00:01:22,940 --> 00:01:24,153
+Let me show it live.
+
+25
+00:01:24,483 --> 00:01:29,509
+The patient enters a phone number and
+date of birth, gives one consent,
+
+26
+00:01:29,509 --> 00:01:31,066
+and types a text code.
+
+27
+00:01:31,066 --> 00:01:33,261
+That's almost all they'll type.
+
+28
+00:01:34,817 --> 00:01:40,904
+Screen two is already filled in: name,
+address, insurance and a thirty-dollar copay.
+
+29
+00:01:40,904 --> 00:01:44,454
+The panel on the right
+shows each lookup landing.
+
+30
+00:01:44,454 --> 00:01:46,773
+Patients never see vendor names.
+
+31
+00:01:48,783 --> 00:01:50,393
+Screen three is safety.
+
+32
+00:01:50,393 --> 00:01:53,051
+It's always asked and never automated.
+
+33
+00:01:53,051 --> 00:01:56,969
+A yes goes straight to crisis
+support, never to booking.
+
+34
+00:01:58,517 --> 00:02:03,447
+On screen four, the patient says
+what's going on in their own words.
+
+35
+00:02:03,447 --> 00:02:08,160
+AI maps it to a fixed list of
+concerns, and the patient confirms.
+
+36
+00:02:09,850 --> 00:02:14,367
+Screen five shows what we pulled,
+medications and past records,
+
+37
+00:02:14,367 --> 00:02:17,092
+for the patient to confirm or correct.
+
+38
+00:02:18,850 --> 00:02:22,382
+Screen six is Legion's
+ranked provider list.
+
+39
+00:02:22,382 --> 00:02:25,673
+Pick a provider, then a day, then a time.
+
+40
+00:02:28,150 --> 00:02:29,268
+On screen seven,
+
+41
+00:02:29,268 --> 00:02:34,301
+each agreement has to be opened and
+read to the end before Book unlocks.
+
+42
+00:02:49,317 --> 00:02:53,376
+Then they're booked, get reminder
+texts, join the video visit,
+
+43
+00:02:53,376 --> 00:02:55,537
+and the first visit is completed.
+
+44
+00:02:55,537 --> 00:02:57,043
+That's the finish line.
+
+45
+00:03:05,850 --> 00:03:09,656
+When data is missing, the patient answers.
+
+46
+00:03:09,656 --> 00:03:14,821
+Here no coverage is found, so
+self-pay is shown up front.
+
+47
+00:03:15,450 --> 00:03:18,599
+And here, records haven't
+come back in time,
+
+48
+00:03:18,599 --> 00:03:21,819
+so we ask instead of
+making the patient wait.
+
+49
+00:03:28,750 --> 00:03:32,530
+The key decisions follow one
+rule: one source per job.
+
+50
+00:03:32,530 --> 00:03:36,940
+Verified only for identity, not
+Persona as well, to avoid cost,
+
+51
+00:03:36,940 --> 00:03:39,600
+privacy exposure and conflicting data.
+
+52
+00:03:39,600 --> 00:03:42,960
+Sohar for insurance, the
+only cost source shown.
+
+53
+00:03:42,960 --> 00:03:45,831
+Metriport for records, in the background.
+
+54
+00:03:45,831 --> 00:03:47,581
+DoseSpot for medications.
+
+55
+00:03:47,581 --> 00:03:49,891
+And doubt always goes to a human.
+
+56
+00:03:50,217 --> 00:03:51,271
+Three trade-offs.
+
+57
+00:03:51,271 --> 00:03:52,698
+Speed versus readiness.
+
+58
+00:03:52,698 --> 00:03:56,980
+Book-first flows like Rula and Headway
+get people into a slot faster.
+
+59
+00:03:56,980 --> 00:03:59,399
+I put safety and intake before booking,
+
+60
+00:03:59,399 --> 00:04:03,494
+because the finish line is a
+completed first visit, not a booking.
+
+61
+00:04:03,494 --> 00:04:07,031
+A slot taken by someone who
+needs a higher level of care,
+
+62
+00:04:07,031 --> 00:04:10,071
+or who arrives with no
+history, is a wasted slot.
+
+63
+00:04:10,071 --> 00:04:11,374
+Clicks versus safety.
+
+64
+00:04:11,374 --> 00:04:16,275
+We pull insurance, meds and records at
+every step, but never use them silently.
+
+65
+00:04:16,275 --> 00:04:17,765
+That costs a few clicks.
+
+66
+00:04:17,765 --> 00:04:21,673
+In psychiatry a wrong medication
+history is a prescribing risk,
+
+67
+00:04:21,673 --> 00:04:25,086
+so confirmation is the price
+of being AI-native safely.
+
+68
+00:04:25,086 --> 00:04:27,009
+Conversion versus transparency.
+
+69
+00:04:27,009 --> 00:04:30,546
+Showing the copay on screen 2
+may lose some people early.
+
+70
+00:04:30,546 --> 00:04:33,462
+Today they leave at step
+11, after ten minutes.
+
+71
+00:04:33,462 --> 00:04:36,006
+I'd rather they decide in thirty seconds.
+
+72
+00:04:36,006 --> 00:04:39,232
+If completed visits per
+start don't rise, we revert.
+
+73
+00:04:39,550 --> 00:04:42,791
+The north star is start
+to first visit completed.
+
+74
+00:04:42,791 --> 00:04:46,893
+Start to booked is the primary
+metric, because it moves first,
+
+75
+00:04:46,893 --> 00:04:50,002
+and booked to visit
+completed is the guardrail,
+
+76
+00:04:50,002 --> 00:04:52,780
+so faster booking doesn't create no-shows.
+
+77
+00:04:52,780 --> 00:04:56,418
+Rollout is gated: we stop if
+safety or show rate slips.
+
+78
+00:04:56,750 --> 00:04:57,724
+How I built it.
+
+79
+00:04:57,724 --> 00:05:02,790
+I used Claude to plan: the funnel analysis,
+research, the PRD and the designs.
+
+80
+00:05:02,790 --> 00:05:07,337
+Claude Code then built the repo on
+GitHub, wrote tests that run in CI,
+
+81
+00:05:07,337 --> 00:05:10,454
+deployed to Vercel, and
+opened the pull request,
+
+82
+00:05:10,454 --> 00:05:12,987
+in about 43 minutes of autonomous work.
+
+83
+00:05:12,987 --> 00:05:16,884
+I stayed in the loop throughout
+and made every product call.
+
+84
+00:05:17,217 --> 00:05:22,223
+Everything is linked here: the live
+prototype, the open pull request, the PRD,
+
+85
+00:05:22,223 --> 00:05:24,533
+the designs and the full AI history.
+
+86
+00:05:24,533 --> 00:05:25,817
+Thanks for watching.

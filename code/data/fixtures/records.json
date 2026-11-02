@@ -1,0 +1,29 @@
+{
+  "_note": "HIE record results (Metriport mock), simplified from FHIR Condition and Encounter. Shown to the patient as 'From your past records' to confirm.",
+  "records": {
+    "p-jordan": {
+      "conditions": [
+        { "code": "F41.1", "display": "Generalized anxiety", "recordedYear": 2024, "source": "Austin Family Medicine (synthetic)" }
+      ],
+      "hospitalStaysPastYear": []
+    },
+    "p-taylor": {
+      "conditions": [
+        { "code": "F32.1", "display": "Depression", "recordedYear": 2025, "source": "Bayou Primary Care (synthetic)" }
+      ],
+      "hospitalStaysPastYear": []
+    },
+    "p-morgan": {
+      "conditions": [
+        { "code": "F43.10", "display": "Post-traumatic stress", "recordedYear": 2023, "source": "North Dallas Clinic (synthetic)" }
+      ],
+      "hospitalStaysPastYear": []
+    },
+    "p-riley": {
+      "conditions": [
+        { "code": "F90.0", "display": "ADHD, inattentive type", "recordedYear": 2021, "source": "Campus Health Center (synthetic)" }
+      ],
+      "hospitalStaysPastYear": []
+    }
+  }
+}

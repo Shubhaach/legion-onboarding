@@ -1,0 +1,57 @@
+{
+  "_note": "PROTOTYPE PLACEHOLDER TEXT, not Legion's legal agreements. Each body is long enough that the patient must scroll; an agreement counts as read only when its end sentinel is scrolled into view. Agreement 3's real title is unknown.",
+  "agreements": [
+    {
+      "id": "consent-telehealth",
+      "title": "Consent to treatment and telehealth",
+      "sections": [
+        { "heading": "What you're agreeing to", "body": "You agree to a psychiatric evaluation and, if appropriate, treatment by a licensed psychiatric mental health nurse practitioner working with Legion Health. Visits happen by secure video. [Prototype placeholder text.]" },
+        { "heading": "What we'll explain", "body": "Before any treatment, your provider will explain the benefits of the proposed treatment, other options, how treatment works, likely side effects, and what may happen without treatment. You can ask questions at any time." },
+        { "heading": "Telehealth", "body": "Video visits follow Texas rules for telehealth. A connection problem may interrupt a visit; your provider will call you back or reschedule. You should join from a private place." },
+        { "heading": "Your choices", "body": "You may stop treatment or withdraw this consent at any time by telling your care team. Stopping does not affect your right to future care." },
+        { "heading": "Emergencies", "body": "Legion Health is not an emergency service. If you are in danger, call 911. You can call or text 988 for the Suicide and Crisis Lifeline." }
+      ]
+    },
+    {
+      "id": "med-history",
+      "title": "Medication history authorization",
+      "sections": [
+        { "heading": "What we retrieve", "body": "You authorize Legion Health to request your prescription and medication history electronically from pharmacies, pharmacy benefit managers and health plans. [Prototype placeholder text.]" },
+        { "heading": "Why", "body": "Your care team uses this history to understand what you take or have taken, avoid harmful interactions and prevent duplicate or unsafe prescribing." },
+        { "heading": "Read-only", "body": "Retrieving your history does not change any of your prescriptions." },
+        { "heading": "Sensitive information", "body": "Some records, such as medications for substance-use treatment, carry extra legal protections. You give this authorization voluntarily." },
+        { "heading": "How long", "body": "This authorization lasts while you are a Legion Health patient. You may revoke it in writing at any time." }
+      ]
+    },
+    {
+      "id": "agreement-3",
+      "title": "[Agreement 3 title: confirm with Legion]",
+      "sections": [
+        { "heading": "Placeholder", "body": "The title and text of this agreement were not available during planning. Replace with Legion's document. [Prototype placeholder text.]" },
+        { "heading": "Section", "body": "Placeholder paragraph so the document scrolls like the real one. Placeholder paragraph so the document scrolls like the real one." },
+        { "heading": "Section", "body": "Placeholder paragraph so the document scrolls like the real one. Placeholder paragraph so the document scrolls like the real one." },
+        { "heading": "Section", "body": "Placeholder paragraph so the document scrolls like the real one. Placeholder paragraph so the document scrolls like the real one." }
+      ]
+    },
+    {
+      "id": "controlled-substances",
+      "title": "Controlled substance policy",
+      "sections": [
+        { "heading": "Our approach", "body": "Legion Health does not prescribe controlled substances except when clinically necessary, as determined by your provider, and always within federal and Texas law. [Prototype placeholder text.]" },
+        { "heading": "Stimulants", "body": "Medicines such as amphetamine salts and methylphenidate raise alertness and attention. Side effects can include reduced appetite, weight loss and sleep problems." },
+        { "heading": "Checks before prescribing", "body": "Before prescribing certain controlled substances, your provider checks the Texas Prescription Monitoring Program, as state law requires." },
+        { "heading": "Your role", "body": "You agree to use one pharmacy, take medicines only as prescribed, and tell your provider about every medicine you take." }
+      ]
+    },
+    {
+      "id": "financial",
+      "title": "Financial agreement",
+      "sections": [
+        { "heading": "Payment at time of service", "body": "Your estimated cost for each visit is shown before you book. Your card on file is used for any copay, deductible or coinsurance. [Prototype placeholder text.]" },
+        { "heading": "Insurance", "body": "Legion Health submits claims to your insurer. You remain responsible for non-covered services, deductibles, copays and coinsurance as determined by your plan." },
+        { "heading": "Changes", "body": "Tell us when your insurance changes. Claims denied because of outdated information may become your responsibility." },
+        { "heading": "Missed visits", "body": "Please cancel or reschedule at least 24 hours before your visit. [Fee policy placeholder: confirm with Legion.]" }
+      ]
+    }
+  ]
+}

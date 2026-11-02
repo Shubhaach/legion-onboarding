@@ -3,3 +3,14 @@ node_modules
 .env*.local
 .next
 .vercel
+*.pem
+*.tsbuildinfo
+next-env.d.ts
+/code/coverage
+/code/test-results
+/code/playwright-report
+/code/playwright/.cache
+
+# walkthrough video build (code/scripts/walkthrough)
+/docs/walkthrough/walkthrough.mp4
+/docs/walkthrough/.build

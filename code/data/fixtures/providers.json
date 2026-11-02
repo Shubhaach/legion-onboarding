@@ -1,0 +1,77 @@
+{
+  "_note": "Fictional PMHNPs. Slots are relative: dayOffset from today, times in America/Chicago. Rank: highest matchScore first; 'Soonest available' label goes to the provider with the earliest slot.",
+  "timezone": "America/Chicago",
+  "visit": { "type": "Initial video visit", "minutes": 60 },
+  "providers": [
+    {
+      "id": "prov-maya",
+      "name": "Maya Chen",
+      "credential": "PMHNP",
+      "initials": "MC",
+      "specialties": ["anxiety", "sleep"],
+      "tags": ["Anxiety", "Sleep"],
+      "eveningHours": true,
+      "slots": [
+        { "dayOffset": 2, "times": ["18:00", "19:00", "19:30"] },
+        { "dayOffset": 3, "times": ["17:30", "18:30"] },
+        { "dayOffset": 4, "times": ["08:00", "17:00", "18:00", "19:00"] },
+        { "dayOffset": 8, "times": ["18:00"] },
+        { "dayOffset": 9, "times": ["08:00", "12:00", "17:00", "18:00", "19:00"] }
+      ]
+    },
+    {
+      "id": "prov-daniel",
+      "name": "Daniel Ortiz",
+      "credential": "PMHNP",
+      "initials": "DO",
+      "specialties": ["depression", "anxiety"],
+      "tags": ["Depression"],
+      "eveningHours": false,
+      "slots": [
+        { "dayOffset": 1, "times": ["12:00"] },
+        { "dayOffset": 3, "times": ["09:00", "11:00"] },
+        { "dayOffset": 5, "times": ["10:00", "13:00", "14:00"] }
+      ]
+    },
+    {
+      "id": "prov-elena",
+      "name": "Elena Ruiz",
+      "credential": "PMHNP",
+      "initials": "ER",
+      "specialties": ["anxiety", "trauma"],
+      "tags": ["Anxiety", "Trauma"],
+      "eveningHours": false,
+      "slots": [
+        { "dayOffset": 3, "times": ["08:00", "09:30"] },
+        { "dayOffset": 6, "times": ["08:00", "10:00", "11:30"] }
+      ]
+    },
+    {
+      "id": "prov-priya",
+      "name": "Priya Nair",
+      "credential": "PMHNP",
+      "initials": "PN",
+      "specialties": ["adhd", "anxiety"],
+      "tags": ["ADHD"],
+      "eveningHours": true,
+      "slots": [
+        { "dayOffset": 2, "times": ["17:00"] },
+        { "dayOffset": 4, "times": ["18:00", "19:00"] },
+        { "dayOffset": 7, "times": ["17:30", "18:30"] }
+      ]
+    },
+    {
+      "id": "prov-marcus",
+      "name": "Marcus Hale",
+      "credential": "PMHNP",
+      "initials": "MH",
+      "specialties": ["depression", "bipolar", "substance_use"],
+      "tags": ["Depression", "Bipolar"],
+      "eveningHours": false,
+      "slots": [
+        { "dayOffset": 2, "times": ["10:00", "11:00"] },
+        { "dayOffset": 5, "times": ["09:00"] }
+      ]
+    }
+  ]
+}
