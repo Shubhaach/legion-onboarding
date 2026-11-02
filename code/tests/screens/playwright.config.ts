@@ -1,6 +1,6 @@
 import { defineConfig, devices } from "@playwright/test";
 
-// Captures docs/screenshots/<scenario>/ from a running app (run from the repo root):
+// Captures ../docs/screenshots/<scenario>/ from a running app (run from code/):
 //   BASE_URL=https://legion-onboarding-theta.vercel.app npm run screenshots
 export default defineConfig({
   testDir: ".",

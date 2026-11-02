@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Design tokens from docs/mockups (CLAUDE.md "Design"). */
+/* Design tokens from ../docs/mockups (CLAUDE.md "Design"). */
 :root {
   --ink: #0b0b0c;
   --ink-2: #55555c;

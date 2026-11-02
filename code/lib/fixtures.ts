@@ -126,7 +126,7 @@ export const reminders = remindersJson.messages as Reminder[];
 
 export const NO_MATCH_SCENARIO = "no_match";
 
-/** Unknown phone numbers behave like "identity not matched" (see docs/decisions.md). */
+/** Unknown phone numbers behave like "identity not matched" (see ../docs/decisions.md). */
 export function scenarioForPhone(phone: string): Scenario {
   return (
     scenarios.find((s) => s.phone === phone) ??

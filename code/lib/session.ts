@@ -1,5 +1,5 @@
 // Session state lives in two signed cookies (no server memory), so it survives
-// Vercel routing requests to different function instances. See docs/decisions.md.
+// Vercel routing requests to different function instances. See ../docs/decisions.md.
 import { createHmac, randomUUID, timingSafeEqual } from "node:crypto";
 import type { NextRequest, NextResponse } from "next/server";
 import type { Address } from "./fixtures";

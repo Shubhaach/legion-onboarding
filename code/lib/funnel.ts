@@ -1,5 +1,5 @@
 // In-memory funnel counts for /debug/funnel. Per server instance and reset on deploy:
-// good enough for a demo, not for analytics (see docs/decisions.md).
+// good enough for a demo, not for analytics (see ../docs/decisions.md).
 import { FUNNEL_STEPS } from "./events";
 
 interface Store {

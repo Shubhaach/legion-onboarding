@@ -2,7 +2,7 @@ import { expect, test, type Page } from "@playwright/test";
 import { PHONES, book, completeVisit, concerns, confirmPulled, endVisit, pickSlot, safetyNo, snapshot, start } from "../e2e/helpers";
 
 const shot = (page: Page, scenario: string, name: string) =>
-  page.screenshot({ path: `docs/screenshots/${scenario}/${name}.png`, fullPage: true });
+  page.screenshot({ path: `../docs/screenshots/${scenario}/${name}.png`, fullPage: true });
 
 test("happy-path", async ({ page }) => {
   const s = "happy-path";
@@ -102,15 +102,15 @@ test("phone-width", async ({ browser }) => {
   const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
   const page = await ctx.newPage();
   await page.goto("/start");
-  await page.screenshot({ path: "docs/screenshots/phone/01-start.png", fullPage: true });
+  await page.screenshot({ path: "../docs/screenshots/phone/01-start.png", fullPage: true });
   await start(page, PHONES.happy, "03141992");
   await expect(page.getByTestId("coverage-card")).toContainText("$30 copay");
-  await page.screenshot({ path: "docs/screenshots/phone/02-confirm.png", fullPage: true });
+  await page.screenshot({ path: "../docs/screenshots/phone/02-confirm.png", fullPage: true });
   await confirmPulled(page, "$30 copay");
   await safetyNo(page);
   await concerns(page, "Feeling low and empty, no energy.", { records: true });
   await snapshot(page, { records: true });
   await page.getByTestId("provider-open").locator("button.time").first().click();
-  await page.screenshot({ path: "docs/screenshots/phone/06-provider.png", fullPage: true });
+  await page.screenshot({ path: "../docs/screenshots/phone/06-provider.png", fullPage: true });
   await ctx.close();
 });

@@ -6,11 +6,11 @@ node_modules
 *.pem
 *.tsbuildinfo
 next-env.d.ts
-/coverage
-/test-results
-/playwright-report
-/playwright/.cache
+/code/coverage
+/code/test-results
+/code/playwright-report
+/code/playwright/.cache
 
-# walkthrough video build (scripts/walkthrough)
+# walkthrough video build (code/scripts/walkthrough)
 /docs/walkthrough/walkthrough.mp4
 /docs/walkthrough/.build

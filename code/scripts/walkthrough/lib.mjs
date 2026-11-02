@@ -1,11 +1,12 @@
-// Shared paths and helpers for the walkthrough pipeline (see docs/walkthrough/SPEC.md).
+// Shared paths and helpers for the walkthrough pipeline (see ../docs/walkthrough/SPEC.md).
 import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
-export const WALK = join(ROOT, "docs/walkthrough");
+export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../.."); // code/
+export const REPO = resolve(ROOT, ".."); // repository root (docs/ lives here)
+export const WALK = join(REPO, "docs/walkthrough");
 export const BUILD = join(WALK, ".build"); // intermediate files, gitignored
 export const AUDIO = join(BUILD, "audio");
 export const SLIDES = join(BUILD, "slides");
