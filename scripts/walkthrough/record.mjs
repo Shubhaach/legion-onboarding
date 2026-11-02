@@ -249,21 +249,22 @@ const STEPS = {
   "d7-book": {
     run: async (page) => {
       await hover(page, page.getByRole("button", { name: "Book visit" }), 900);
+      // The first agreement is read on camera at a readable pace; the other four go quicker.
       for (let i = 0; i < 5; i++) {
-        await click(page, page.locator("button.doc").nth(i), 120);
+        await click(page, page.locator("button.doc").nth(i), i === 0 ? 120 : 40);
         const scroll = page.getByTestId("agreement-scroll");
-        await glide(page, scroll, { ring: false });
+        if (i === 0) await glide(page, scroll, { ring: false });
         await scroll.evaluate((el) => el.scrollTo({ top: el.scrollHeight, behavior: "smooth" }));
         await page.getByTestId("agreement-end").getByText(/Marked as read/).waitFor({ timeout: 10_000 });
-        await sleep(350);
-        await click(page, page.getByRole("dialog").getByRole("button", { name: "Close" }), 100);
+        await sleep(i === 0 ? 350 : 120);
+        await click(page, page.getByRole("dialog").getByRole("button", { name: "Close" }), 40);
       }
-      await hover(page, page.getByTestId("read-count"), 500);
-      await type(page, page.getByLabel("Card number"), "4242424242424242", 30);
-      await type(page, page.getByLabel("Expiry"), "1230", 40);
-      await type(page, page.getByLabel("CVC"), "123", 40);
-      await type(page, page.getByLabel("ZIP"), "78704", 40);
-      await type(page, page.getByLabel("Sign with your full name"), "Jordan Reyes", 45);
+      await hover(page, page.getByTestId("read-count"), 400);
+      await type(page, page.getByLabel("Card number"), "4242424242424242", 22);
+      await type(page, page.getByLabel("Expiry"), "1230", 30);
+      await type(page, page.getByLabel("CVC"), "123", 30);
+      await type(page, page.getByLabel("ZIP"), "78704", 30);
+      await type(page, page.getByLabel("Sign with your full name"), "Jordan Reyes", 35);
       await click(page, page.getByLabel("I've read and agree to these agreements"));
     },
     exit: async (page) => {

@@ -9,7 +9,8 @@
     "lint": "eslint",
     "test": "playwright test",
     "test:live": "BASE_URL=${BASE_URL:?set BASE_URL} playwright test",
-    "walkthrough": "node scripts/walkthrough/build.mjs"
+    "walkthrough": "node scripts/walkthrough/build.mjs",
+    "walkthrough:openai": "WALKTHROUGH_TTS=openai WALKTHROUGH_TEMPO=${WALKTHROUGH_TEMPO:-1.1} node scripts/walkthrough/build.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.3.0",
