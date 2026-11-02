@@ -3,7 +3,7 @@
 A working prototype of Legion Health's patient onboarding, rebuilt so data is **pulled, then confirmed**. The patient types a phone number and date of birth. Identity, insurance, copay, past records and medications are fetched in parallel and shown for the patient to confirm. Only what no system can know is asked: the safety question, what's going on in their own words, and consent. 15 screens become 7, and the flow runs past booking through **first visit completed**, which is where the brief says onboarding ends.
 
 - **Live prototype:** https://legion-onboarding-theta.vercel.app (synthetic data only)
-- **Walkthrough video (~5 min):** _link to be added_
+- **Walkthrough video (~5 min):** https://drive.google.com/file/d/1V5m7UJl9WINz2dx_LDDAevKSl5za2ll3/view?usp=sharing
 - **PRD:** [`docs/PRD.md`](../docs/PRD.md) · **Decisions and trade-offs:** [`docs/decisions.md`](../docs/decisions.md) · **Data sources and what each adds:** [`docs/data-sources.md`](../docs/data-sources.md) · **Baseline funnel:** [`docs/current-funnel.md`](../docs/current-funnel.md) · **Brief:** [`docs/brief.md`](../docs/brief.md)
 - **AI interaction history:** [`docs/ai-history/`](../docs/ai-history/) (Claude Code build session) and the [Claude planning chat](https://claude.ai/share/62e5fa94-5c8b-4c72-9ab2-c04e6ee85155) (research, PRD, designs). Redaction rules and the redaction log are in [`docs/ai-history/README.md`](../docs/ai-history/README.md).
 
